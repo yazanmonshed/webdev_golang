@@ -21,4 +21,4 @@ jobs:
 #       run: go mod init
 
     - name: Test
-      run: chmod 644 main.go
+      run: chmod 644 index.go
