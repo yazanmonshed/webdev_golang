@@ -1,31 +1,3 @@
-# name: Go
-
-# on:
-#   push:
-#     branches: [ master ]
-#   pull_request:
-#     branches: [ master ]
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v2
-
-#     - name: Set up Go
-#       uses: actions/setup-go@v2
-#       with:
-#         go-version: 1.17
-
-# #     - name: Build
-# #       run: go mod init
-
-#     - name: Test
-#       run: chmod 644 index.go
-      
-      
-      
-      ######################3e
 name: Go
 on:
   push:
@@ -62,7 +34,6 @@ jobs:
         image: yazanmonshed/webgolang
         tags: v1, latest
         registry: docker.io
-        dockerfile: Dockerfile.ci
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
       
