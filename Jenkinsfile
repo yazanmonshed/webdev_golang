@@ -4,7 +4,7 @@ pipeline {
         stage('Build') { 
             steps {
                 // 
-                go build main
+                echo "test build here.."
             }
         }
         stage('Test') { 
