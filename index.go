@@ -5,8 +5,6 @@ import (
 	"io"
 )
 
-
-
 func main() {
 
 	http.HandleFunc("/", call)
