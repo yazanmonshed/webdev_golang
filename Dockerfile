@@ -2,7 +2,7 @@ FROM golang:1.16 as development
 
 WORKDIR /app
 
-COPY go.mod go.sum ./
+COPY go.mod  ./
 
 RUN go run download
 
