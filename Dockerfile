@@ -2,12 +2,12 @@ FROM golang:1.16 as development
 
 WORKDIR /app
 
-COPY go.mod  ./
+COPY . .
 
-RUN go run download
+RUN go build -o app
+
 
 RUN go build index.go
-COPY . .
 
 EXPOSE 3000
 
