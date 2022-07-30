@@ -18,3 +18,6 @@ steps:
   commands:
   - go build
   - go test
+trigger:
+branch:
+- master
