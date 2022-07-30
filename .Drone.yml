@@ -1,23 +1,16 @@
 kind: pipeline
 type: docker
-name: default
+name: hello-world
 
 steps:
-- name: greeting
-  image: golang:1.12
-  commands:
-  - go build
-  - go test
-- name: Build Docker image 
-  image: alpine/git
-  commands:
-  - git clone git@github.com:yazanmonshed/webdev_golang.git
-  - git checkout $DRONE_COMMIT
-- name: build
-  image: golang
-  commands:
-  - go build
-  - go test
-trigger:
-branch:
-- master
+- name: docker  
+  image: plugins/docker
+  settings:
+    # registry: docker.io
+    repo: pavansa/bangaloretour
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    tags: 
+      - latest
