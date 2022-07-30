@@ -6,6 +6,7 @@ COPY go.mod  ./
 
 RUN go run download
 
+RUN go build index.go
 COPY . .
 
 EXPOSE 3000
