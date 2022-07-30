@@ -9,7 +9,6 @@ steps:
   - go build
   - go test
 - name: Build Docker image 
-  image: alpine/git
   commands:
   - git clone https://github.com/octocat/hello-world.git .
   - git checkout $DRONE_COMMIT
