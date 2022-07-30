@@ -1,6 +1,6 @@
 kind: pipeline
 type: docker
-name: hello-world
+name: goapp service
 
 steps:
 - name: docker  
